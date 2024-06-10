@@ -20,6 +20,11 @@ h1 {
     font-size: 40px;
     margin-top: 70px;
 }
+p {
+    font-size: 18px;
+    width: 60%;
+    margin: 0 auto;
+}
 
 
 .text-h1 {
@@ -32,6 +37,7 @@ h1 {
     padding: 13px;
     margin: 0 auto;
     border-radius: 8px;
+    
 }
 .button {
     display: block;
@@ -78,22 +84,19 @@ span {
     padding: 7px;
     background-color: green;
     color: white;
-    border-radius: 12px;
 }
 .btn-no {
     padding: 7px;
     background-color: red;
     color: white;
-    border-radius: 12px;
 }
 .btn-success-yellow {
     background-color: rgb(211, 211, 90);
     padding: 7px;
-    border-radius: 10px;
 }
 .btn-success-yellow:hover {
     cursor: pointer;
-    opacity: 0.9;
+    opacity: 0.8;
     transition: 0.5s;
 }
 
@@ -111,8 +114,4 @@ span {
 .text-decoration-line-through {
     text-decoration: line-through;
 }
-p {
-    font-size: 18px;
-    width: 60%;
-    margin: 0 auto;
-}
+

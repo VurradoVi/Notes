@@ -1,12 +1,7 @@
 const inputElement = document.getElementById('input')
 const createBtn = document.getElementById('create')
 const listElement = document.getElementById('list')
-const notes = [
-    {
-        title: 'testTestTest',
-        completed: false,
-    }
-]
+const notes = JSON.parse(localStorage.getItem('notes')) || []
 
 listElement.onclick = function (event) {
     if (event.target.dataset.index) {
@@ -34,6 +29,7 @@ function render() {
 render()
 
 function getNoteTemplate(note, index) {
+    localStorage.setItem('notes', JSON.stringify(notes))
     return `<li class="list-item">
     <span class="${note.completed ? 'text-decoration-line-through' : ''}">${note.title}</span>
     <div class="btn-small">
@@ -52,6 +48,23 @@ createBtn.onclick = function () {
         completed: false,
     }
     notes.push(newNote)
+    localStorage.setItem('notes', JSON.stringify(notes))
     render()
     inputElement.value = ''
 }
+
+inputElement.addEventListener("keydown", function (e) {
+    if (e.key === "Enter") {
+        if (inputElement.value.length === 0) {
+            return
+        }
+        const newNote = {
+            title: inputElement.value,
+            completed: false,
+        }
+        notes.push(newNote)
+        localStorage.setItem('notes', JSON.stringify(notes))
+        render()
+        inputElement.value = ''
+    }
+});
