@@ -26,7 +26,6 @@ p {
     margin: 0 auto;
 }
 
-
 .text-h1 {
     text-align: center;
 }
@@ -55,7 +54,7 @@ p {
 .button:hover {
     cursor: pointer;
     background-color: #8a1717;
-    transition: 0.5s
+    transition: 0.6s
 }
 
 span {
@@ -96,7 +95,7 @@ span {
 }
 .btn-success-yellow:hover {
     cursor: pointer;
-    opacity: 0.8;
+    opacity: 0.7;
     transition: 0.5s;
 }
 
@@ -107,7 +106,7 @@ span {
 }
 .btn-no:hover {
     cursor: pointer;
-    opacity: 0.7;
+    opacity: 0.6;
     transition: 0.5s;
 }
 
